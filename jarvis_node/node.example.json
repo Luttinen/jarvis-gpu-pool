@@ -1,0 +1,26 @@
+{
+  "node_id": "gaming-pc",
+  "nimi": "Gaming PC (RTX GPU)",
+  "os": "windows",
+  "prioriteetti": 2,
+  "kuuntele": ["0.0.0.0"],
+  "portti": 8791,
+  "palvelut": {
+    "ollama": {
+      "portti": 11434,
+      "terveys": "/api/tags",
+      "tunniste": "ollama",
+      "kaynnistys": "%LOCALAPPDATA%\\Programs\\Ollama\\ollama.exe",
+      "argumentit": "serve"
+    },
+    "comfyui": {
+      "portti": 8188,
+      "terveys": "/system_stats",
+      "tehtava": "ComfyUI",
+      "tunniste": "ComfyUI\\main.py",
+      "odota_s": 300
+    }
+  },
+  "pelit": ["GTA5.exe", "cs2.exe", "PathOfExile.exe"],
+  "token_tiedosto": "node_token.txt"
+}

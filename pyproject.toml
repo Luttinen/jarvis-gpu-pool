@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jarvis-gpu-pool"
+version = "0.3.0"
+description = "Turn the gaming PCs at home into one GPU pool: signed job routing, Wake-on-LAN, keep-awake, sleep and a persistent job queue. Stdlib only."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+# License: not decided yet — see README.md ("Ownership and license").
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Distributed Computing",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+jarvis-node = "jarvis_node.node:main"
+
+[tool.setuptools]
+packages = ["jarvis_core", "jarvis_node", "jarvis_pool"]
+
+[tool.setuptools.package-data]
+jarvis_node = ["node.example.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

@@ -1,0 +1,38 @@
+{
+  "laitteet": {
+    "desktop": {
+      "nimi": "Desktop (coordinator)",
+      "paikallinen": true,
+      "os": "windows",
+      "node_portti": 8791
+    },
+    "gaming-pc": {
+      "nimi": "Gaming PC",
+      "os": "windows",
+      "tailscale": "100.64.0.20",
+      "lan": "192.168.1.20",
+      "node_portti": 8791,
+      "ssh_kayttaja": "gamer",
+      "mac": "00-11-22-33-44-55",
+      "automaattisammutus": true,
+      "automaattisammutus_tapa": "nukku",
+      "aliakset": ["second pc"],
+      "sovellukset": {
+        "comfyui": {
+          "portti": 8188,
+          "terveys": "/system_stats",
+          "tehtava": "ComfyUI",
+          "tunniste": "ComfyUI\\main.py",
+          "odota_s": 300
+        },
+        "ollama": {
+          "portti": 11434,
+          "terveys": "/api/tags",
+          "tunniste": "ollama",
+          "kaynnistys": "%LOCALAPPDATA%\\Programs\\Ollama\\ollama.exe",
+          "argumentit": "serve"
+        }
+      }
+    }
+  }
+}
