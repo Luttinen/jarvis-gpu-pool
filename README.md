@@ -2,9 +2,7 @@
 
 Use the gaming PCs in your home as one GPU pool.
 
-> **Not yet licensed for reuse.** The copyright holder still has to confirm ownership
-> and choose a license before this is published. See
-> [Ownership and license](#ownership-and-license).
+> Licensed under the [MIT License](LICENSE).
 
 A coordinator sends work such as LLM chat, vision or ComfyUI workflows to whichever
 machine is free. If the right machine is asleep, the job is queued, the machine is
@@ -185,10 +183,6 @@ sockets and clocks are replaced with fakes.
   replacement for the token.
 - `/health` is unauthenticated. It reveals only the node id and version.
 
-## Ownership and license
+## License
 
-This code was extracted from a larger private project. That project's LICENSE names
-a different copyright holder than the person preparing this package. **Before
-publishing, the copyright holder must confirm the rights to release this code and
-choose a license.** `LICENSE.MIT-proposal` contains MIT as a suggestion only. It is
-not in effect until it is renamed to `LICENSE` and filled in by the copyright holder.
+MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Jarno Eemeli.

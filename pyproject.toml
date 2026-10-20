@@ -9,7 +9,7 @@ description = "Turn the gaming PCs at home into one GPU pool: signed job routing
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
-# License: not decided yet — see README.md ("Ownership and license").
+license = { text = "MIT" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: Microsoft :: Windows",
